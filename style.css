@@ -8,3 +8,11 @@ body{
   height: 100%;
   background-color: #eeeeee;
 }
+#myChart{
+  width: 50%;
+  height: 50%;
+}
+.grafico{
+  width: 80%;
+  margin: auto;
+}
