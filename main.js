@@ -5,9 +5,11 @@ $(function() {
     method: "GET",
     success:function(data){
       console.log(data)
-      var totvendite = 0
       for (var i = 0; i < data.length; i++) {
+        totvendite=0
         var vendite = data[i].amount
+        var mese = moment(data[i].date, 'DD, MM, YYYY');
+        console.log(mese)
         totvendite = totvendite + vendite
         var ctx = document.getElementById('myChart').getContext('2d');
         var chart = new Chart(ctx, {
