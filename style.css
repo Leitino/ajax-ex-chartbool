@@ -13,6 +13,11 @@ body{
   height: 50%;
 }
 .grafico{
-  width: 80%;
+  width: 50%;
+  float: left;
   margin: auto;
+  margin-top: 10px;
+}
+.grafico_titolo{
+  text-align: center;
 }
