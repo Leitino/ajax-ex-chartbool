@@ -21,3 +21,6 @@ body{
 .grafico_titolo{
   text-align: center;
 }
+.input{
+  width: 100px;
+}

@@ -11,6 +11,24 @@ $(function() {
       alert('si è verificato un errore')
     }
   });
+  $('.button').click(function() {
+    var valoreVenditore = $('.lista-venditori').val()
+    var valoreImporto = parseInt($(".input-vendita").val());
+    console.log(valoreVenditore, valoreMese, valoreImporto)
+    $.ajax({
+      url:"http://138.68.64.12:3018/sales",
+      method: "POST",
+      data: {
+        salesman:	valoreVenditore,
+        amount:	valoreImporto,
+      },
+      success:function(data){
+        console.log(data)
+      },
+    });
+
+  })
+
 });
 function printPieChart(vendite) {
   var dati= getDataForPieChart(vendite)
