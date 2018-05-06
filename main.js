@@ -11,25 +11,7 @@ $(function() {
       alert('si è verificato un errore')
     }
   });
-  $('.button').click(function() {
-    var valoreVenditore = $('.lista-venditori').val()
-    var valoreImporto = parseInt($(".input-vendita").val());
-    var dataVendita= $('.mese-vendita').val()
-    console.log(valoreVenditore, dataVendita, valoreImporto)
-    $.ajax({
-      url:"http://138.68.64.12:3018/sales",
-      method: "POST",
-      data: {
-        salesman:	valoreVenditore,
-        amount:	valoreImporto,
-        date: dataVendita,
-      },
-      success:function(data){
-        console.log(data)
-      },
-    });
 
-  })
 
 });
 function printPieChart(vendite) {
